@@ -23,6 +23,16 @@ empdf = spark.createDataFrame(data=emp, schema=emp_columns)
 deptdf = spark.createDataFrame(data=dept, schema=dept_columns)
 
 print("*" * 100)
+print("Emp dataframe")
+print("*" * 100)
+print(empdf.show())
+
+print("*" * 100)
+print("Department dataframe")
+print("*" * 100)
+print(deptdf.show())
+
+print("*" * 100)
 print("Inner Join gets common values from both tables and drops the unmatched")
 print("*" * 100)
 innerjoin = empdf.join(deptdf, empdf.emp_dept_id == deptdf.dept_id, "inner")
