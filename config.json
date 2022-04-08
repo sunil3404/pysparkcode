@@ -1,0 +1,9 @@
+{
+	"appName" : "TestApp",
+	"columns" : ["name", "age", "sex", "class", "embarked", "fare"],
+	"database_name": "kaggle",
+	"titanic_table": "titanic",
+	"partition_table_name": "partition_gender_table",
+	"partition_column" : "sex",
+	"write_mode" : "overwrite"
+}
