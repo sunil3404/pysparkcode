@@ -22,13 +22,13 @@ deptdf = returnDataFrames(dept, deptschema)
 print("*" * 50)
 print("Base DataFrames")
 print("*" * 50)
-print(empdf.show())
-print(deptdf.show())
+empdf.show()
+deptdf.show()
 
 print("*" * 50)
 print("BroadcastJoin")
 print("*" * 50)
 
-print(empdf.join(broadcast(deptdf), empdf.empid == deptdf.dept_id).show())
+empdf.join(broadcast(deptdf), empdf.empid == deptdf.dept_id).show()
 
 
