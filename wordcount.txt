@@ -1,0 +1,10 @@
+# pysparkcode
+
+Distribution of Executors, Cores and Memory for a Spark Application running in Yarn:
+
+	spark-submit --class <CLASS_NAME> --num-executors ? --executor-cores ? --executor-memory ? ....
+
+
+Following list captures some recommendations to keep in mind while configuring them:
+
+    Hadoop/Yarn/OS Deamons: When we run spark application using a cluster manager like Yarn, there’ll be several daemons that’ll run in the backgr    ound like NameNode, Secondary NameNode, DataNode, JobTracker and TaskTracker. So, while specifying num-executors, we need to make sure that we    leave aside enough cores (~1 core per node) for these daemons to run smoothly.
